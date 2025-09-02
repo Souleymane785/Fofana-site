@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mandé Multi Services - Études à l'étranger (Inde, Russie), visas, services médicaux, intermédiation commerciale et plus. Votre passerelle internationale de confiance.">
+    <title>Mandé Multi Services - Votre passerelle internationale</title>
+    
+    <!-- NOUVEAU : Liens pour le Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            padding-top: 80px; 
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .flag-icon {
+            width: 30px;
+            height: 20px;
+            display: inline-block;
+            margin-right: 5px;
+            border-radius: 2px;
+        }
+        .mobile-nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+        #scroll-to-top {
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50 top-0">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="flex items-center">
+                <img src="Images/Logo.jpg" alt="Logo de Mandé Multi Services" class="w-12 h-12 rounded-full mr-3">
+                <div>
+                    <strong class="text-blue-800 font-bold text-xl">Mandé Multi Services</strong>
+                    <p class="text-xs text-gray-600">Votre passerelle de confiance internationale</p>
+                </div>
+            </a>
+            <nav class="hidden md:block" id="nav-menu">
+                <ul class="flex flex-col text-center space-y-4 md:space-y-0 md:flex-row md:space-x-8">
+                    <li><a href="#home" class="nav-link text-blue-800 font-medium hover:text-yellow-600 transition">Accueil</a></li>
+                    <li><a href="#services" class="nav-link text-gray-700 hover:text-yellow-600 transition">Services</a></li>
+                    <li><a href="#about" class="nav-link text-gray-700 hover:text-yellow-600 transition">À propos</a></li>
+                    <li><a href="#testimonials" class="nav-link text-gray-700 hover:text-yellow-600 transition">Témoignages</a></li>
+                    <li><a href="#realisations" class="nav-link text-gray-700 hover:text-yellow-600 transition">Nos Réalisations</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-700 hover:text-yellow-600 transition">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                <i data-feather="menu" class="text-blue-800"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg py-20 text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+            <div class="flex justify-center space-x-4 mb-6">
+                <span class="text-4xl">🇲🇱</span>
+                <span class="text-4xl">🇮🇳</span>
+                <span class="text-4xl">🇷🇺</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Mandé Multi Services</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Étudier, voyager, commercer et se soigner en toute confiance.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-full transition duration-300">Nous contacter</a>
+                <a href="#services" class="bg-transparent hover:bg-white hover:text-blue-800 text-white font-bold py-3 px-6 border-2 border-white rounded-full transition duration-300">Voir nos services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12" data-aos="fade-up">Nos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i data-feather="book" class="text-blue-800"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">Études à l'étranger</h3>
+                    <div class="mb-3"><span class="flag-icon" style="background-image: url('https://flagcdn.com/in.svg');"></span><span class="flag-icon" style="background-image: url('https://flagcdn.com/ru.svg');"></span></div>
+                    <p class="text-gray-600">Nous facilitons votre admission dans les meilleures universités en Inde et en Russie.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i data-feather="file-text" class="text-blue-800"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">Visa électronique</h3>
+                    <div class="mb-3"><span class="flag-icon" style="background-image: url('https://flagcdn.com/in.svg');"></span><span class="flag-icon" style="background-image: url('https://flagcdn.com/ae.svg');"></span><span class="flag-icon" style="background-image: url('https://flagcdn.com/th.svg');"></span></div>
+                    <p class="text-gray-600">Obtention rapide de visas électroniques pour plusieurs destinations asiatiques.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i data-feather="message-square" class="text-blue-800"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">Apprentissage de l'anglais</h3>
+                    <p class="text-gray-600">Cours d'anglais en ligne et en présentiel adaptés à tous les niveaux.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i data-feather="heart" class="text-blue-800"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">Services médicaux en Inde</h3>
+                    <div class="mb-3"><span class="flag-icon" style="background-image: url('https://flagcdn.com/in.svg');"></span></div>
+                    <p class="text-gray-600">Accès aux meilleurs hôpitaux et spécialistes médicaux en Inde.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i data-feather="shopping-cart" class="text-blue-800"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">Intermédiation commerciale</h3>
+                    <div class="mb-3"><span class="flag-icon" style="background-image: url('https://flagcdn.com/in.svg');"></span><span class="flag-icon" style="background-image: url('https://flagcdn.com/ml.svg');"></span></div>
+                    <p class="text-gray-600">Facilitation des échanges commerciaux entre l'Inde et le Mali.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4"><i data-feather="image" class="text-blue-800"></i></div>
+                    <h3 class="text-xl font-bold mb-2 text-blue-800">Graphisme & Design</h3>
+                    <p class="text-gray-600">Services professionnels de conception graphique pour votre entreprise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Équipe en réunion de travail collaborative" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">À propos de nous</h2>
+                    <p class="text-gray-600 mb-6">Mandé Multi Services accompagne les étudiants, voyageurs et entrepreneurs vers de nouvelles opportunités à l'étranger.</p>
+                    <p class="text-gray-600 mb-6">Grâce à nos partenariats solides en Inde, en Russie et au Mali, nous offrons des services fiables et rapides dans l'éducation, le voyage, la santé et le commerce.</p>
+                    <p class="text-gray-600">Notre mission est de faciliter vos projets internationaux en vous offrant un accompagnement personnalisé et professionnel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-12" data-aos="fade-up">Témoignages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4"><img src="Images/CU13.jpg" alt="Photo de profil de Aïssata Diarra" class="w-12 h-12 rounded-full mr-4"><div><h4 class="font-bold text-blue-800">Souleymane Doumbia</h4><p class="text-sm text-gray-500">Étudiante en Inde</p></div></div>
+                    <p class="text-gray-600 italic">"Grâce à Mandé Multi Services, j'ai pu intégrer une excellente université en Inde. Leur accompagnement a été précieux tout au long du processus."</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4"><img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Photo de profil de Moussa Keita" class="w-12 h-12 rounded-full mr-4"><div><h4 class="font-bold text-blue-800">Moussa Keita</h4><p class="text-sm text-gray-500">Entrepreneur</p></div></div>
+                    <p class="text-gray-600 italic">"Le service d'intermédiation commerciale m'a permis d'établir des contacts fiables en Inde pour mon entreprise. Je recommande vivement !"</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Photo de profil de Fatoumata Traoré" class="w-12 h-12 rounded-full mr-4"><div><h4 class="font-bold text-blue-800">Fatoumata Traoré</h4><p class="text-sm text-gray-500">Touriste</p></div></div>
+                    <p class="text-gray-600 italic">"J'ai obtenu mon visa électronique pour Dubaï en seulement 3 jours grâce à Mandé Multi Services. Un service rapide et professionnel."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section "Nos Réalisations" -->
+    <section id="realisations" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-800 mb-6" data-aos="fade-up">Nos Réalisations</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12" data-aos="fade-up" data-aos-delay="100">Découvrez les histoires de réussite de nos étudiants et la force de nos partenariats commerciaux.</p>
+            <div id="filters" class="flex justify-center flex-wrap gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active bg-blue-800 text-white font-medium py-2 px-4 rounded-full transition" data-filter="all">Tous</button>
+                <button class="filter-btn bg-white text-gray-700 font-medium py-2 px-4 rounded-full transition hover:bg-blue-100" data-filter="etudiant">Parcours Étudiants</button>
+                <button class="filter-btn bg-white text-gray-700 font-medium py-2 px-4 rounded-full transition hover:bg-blue-100" data-filter="partenaire">Partenaires Commerciaux</button>
+            </div>
+            <div id="gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item flex flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU12.jpg" alt="Vue aérienne du campus de Chandigarh University" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Un Campus d'Excellence</h3><p class="text-gray-600 mb-3">Vue du campus de Chandigarh University, offrant un cadre d'étude exceptionnel.</p></div></div>
+                <div class="gallery-item flex flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM10.jpg" alt="Batteries solaires Future Energy" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Future Energy</h3><p class="text-gray-600 mb-3">Distribution de batteries tubulaires haute performance.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU2.jpg" alt="Bourses à Chandigarh University" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Bourses d'Études</h3><p class="text-gray-600 mb-3">Nous aidons à postuler pour des bourses jusqu'à 50%.</p></div></div>
+                <div class="gallery-item flex flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU1.jpg" alt="Publicité pour Chandigarh University" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Partenariat Universitaire</span><h3 class="text-xl font-bold my-2 text-blue-900">Chandigarh University</h3><p class="text-gray-600 mb-3">Accès à l'université privée n°1 en Inde.</p></div></div>
+                <div class="gallery-item flex flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM11.jpg" alt="Chargement de marchandises" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Logistique & Export</h3><p class="text-gray-600 mb-3">Organisation du transport et de l'exportation.</p></div></div>
+                <div class="gallery-item flex flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU6.jpg" alt="Groupe d'étudiants maliens en Inde" class="w-full h-48 object-contain bg-gray-100"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Vie étudiante en Inde</h3><p class="text-gray-600 mb-3">Nous favorisons l'intégration de nos étudiants.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM1.jpg" alt="Publicité Taurus Petroleums" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Taurus Petroleums</h3><p class="text-gray-600 mb-3">Importation de liquides de frein et lubrifiants certifiés.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM6.jpg" alt="Confiseries Al Kamal" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Confiseries Al Kamal</h3><p class="text-gray-600 mb-3">Export de confiseries variées pour les grossistes.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU8.jpg" alt="Étudiants à l'aéroport" class="w-full h-48 object-contain bg-gray-100"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Accueil à l'Aéroport</h3><p class="text-gray-600 mb-3">Un accueil personnalisé dès l'arrivée.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM5.jpg" alt="Publicité Lithium Power Energy" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Lithium Power Energy</h3><p class="text-gray-600 mb-3">Solutions énergétiques et batteries au lithium.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU10.jpg" alt="Étudiants au marché" class="w-full h-48 object-contain bg-gray-100"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Découverte Locale</h3><p class="text-gray-600 mb-3">L'immersion passe par la découverte de la vie locale.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM12.jpg" alt="Visite d'usine" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Visites d'Usines</h3><p class="text-gray-600 mb-3">Contrôle qualité chez les producteurs.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU9.jpg" alt="Étudiants intégrés" class="w-full h-48 object-contain bg-gray-100"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Intégration & Amitiés</h3><p class="text-gray-600 mb-3">De nouvelles amitiés pour une expérience inoubliable.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM7.jpg" alt="Lames de rasoir Swardex" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Lames Swardex</h3><p class="text-gray-600 mb-3">Exportation de lames de rasoir "Double Edge Platinum".</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM3.jpg" alt="Rencontre B2B" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Salons Internationaux</h3><p class="text-gray-600 mb-3">Renforcer les liens commerciaux.</p></div></div>
+                <div class="gallery-item hidden flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="partenaire" data-aos="fade-up"><img src="Images/COM15.jpg" alt="Conteneur de marchandises" class="w-full h-48 object-cover"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-yellow-600">Partenaire Commercial</span><h3 class="text-xl font-bold my-2 text-blue-900">Export en Conteneur</h3><p class="text-gray-600 mb-3">Gestion de l'empotage et de l'expédition.</p></div></div>
+                <div class="gallery-item flex flex-col bg-white rounded-lg shadow-md overflow-hidden" data-category="etudiant" data-aos="fade-up"><img src="Images/CU11.jpg" alt="Étudiant en salle d'étude" class="w-full h-48 object-contain bg-gray-100"><div class="p-6 flex flex-col flex-grow"><span class="text-sm font-semibold text-blue-600">Parcours Étudiant</span><h3 class="text-xl font-bold my-2 text-blue-900">Concentration & Études</h3><p class="text-gray-600 mb-3">Un environnement propice à la réussite académique.</p></div></div>
+            </div>
+            <div id="gallery-controls" class="text-center mt-12">
+                <button id="load-more-btn" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Voir plus</button>
+                <button id="reduce-btn" class="hidden bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">Réduire</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Contactez-nous</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-4">Coordonnées</h3>
+                        <div class="flex items-center mb-3"><i data-feather="phone" class="mr-3 text-yellow-400"></i><div><p class="font-medium">Inde: (+91) 98-88-40-20-03</p><p class="font-medium">Mali: (+223) 71-40-40-51</p></div></div>
+                        <div class="flex items-center mb-3"><i data-feather="mail" class="mr-3 text-yellow-400"></i><p class="font-medium">mandemultiservices6@gmail.com</p></div>
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold mb-4">Réseaux sociaux</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" aria-label="Suivez-nous sur Facebook" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i data-feather="facebook" class="text-white"></i></a>
+                            <a href="#" aria-label="Suivez-nous sur LinkedIn" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i data-feather="linkedin" class="text-white"></i></a>
+                            <a href="#" aria-label="Contactez-nous sur WhatsApp" class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i data-feather="message-circle" class="text-white"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden">
+                        <iframe title="Carte Google Maps de notre localisation" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249089.4718482434!2d-8.093158659103816!3d12.61330960228303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51d385defd5c63%3A0x847a61d62a088998!2sBamako%2C%20Mali!5e0!3m2!1sfr!2sfr!4v1662061988812!5m2!1sfr!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form action="https://formspree.io/f/VOTRE_ID_UNIQUE" method="POST" class="bg-white rounded-lg shadow-lg p-6 text-gray-800">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Service intéressé</label>
+                            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option value="">Sélectionnez un service</option>
+                                <option value="etudes">Études à l'étranger</option>
+                                <option value="visa">Visa électronique</option>
+                                <option value="anglais">Apprentissage de l'anglais</option>
+                                <option value="medical">Services médicaux en Inde</option>
+                                <option value="commerce">Intermédiation commerciale</option>
+                                <option value="graphisme">Graphisme & Design</option>
+                                <option value="voyage">Réservation de billets & hôtels</option>
+                            </select>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <!-- MODIFICATION : Remplacement de l'icône par le logo -->
+                        <img src="Images/Logo.jpg" alt="Logo de Mandé Multi Services" class="w-10 h-10 rounded-full mr-3">
+                        <div><h2 class="font-bold text-lg">Mandé Multi Services</h2><p class="text-sm text-blue-200">Votre passerelle de confiance internationale</p></div>
+                    </div>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" aria-label="Suivez-nous sur Facebook" class="hover:text-yellow-400 transition"><i data-feather="facebook"></i></a>
+                    <a href="#" aria-label="Suivez-nous sur Twitter" class="hover:text-yellow-400 transition"><i data-feather="twitter"></i></a>
+                    <a href="#" aria-label="Suivez-nous sur LinkedIn" class="hover:text-yellow-400 transition"><i data-feather="linkedin"></i></a>
+                    <a href="#" aria-label="Suivez-nous sur Instagram" class="hover:text-yellow-400 transition"><i data-feather="instagram"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-6 pt-6 text-center text-sm text-blue-200">
+                <p>&copy; <span id="copyright-year"></span> Mandé Multi Services. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bouton "Retour en haut" -->
+    <a href="#home" id="scroll-to-top" class="fixed bottom-5 right-5 p-3 rounded-full bg-blue-800 text-white shadow-lg hover:bg-blue-700 transition opacity-0 invisible z-50" aria-label="Retour en haut de la page">
+        <i data-feather="arrow-up"></i>
+    </a>
+
+   <script>
+        // ... Tous les scripts finaux et corrigés ...
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+            feather.replace();
+
+            // --- SCRIPT DE NAVIGATION FLUIDE & MENU MOBILE AMÉLIORÉ ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const navMenu = document.getElementById('nav-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+            const navLinks = document.querySelectorAll('.nav-link, a[href="#home"]');
+
+            function closeMenu() {
+                navMenu.classList.add('hidden');
+                navMenu.classList.remove('mobile-nav');
+                menuIcon.setAttribute('data-feather', 'menu');
+                feather.replace();
+            }
+            mobileMenuButton.addEventListener('click', () => {
+                const isMenuOpen = !navMenu.classList.contains('hidden');
+                if (isMenuOpen) { closeMenu(); } 
+                else {
+                    navMenu.classList.remove('hidden');
+                    navMenu.classList.add('mobile-nav');
+                    menuIcon.setAttribute('data-feather', 'x');
+                    feather.replace();
+                }
+            });
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(link.getAttribute('href'));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    if (window.innerWidth < 768) { closeMenu(); }
+                });
+            });
+
+            // --- SCRIPT FINAL POUR LA GALERIE (Filtres + Voir plus / Réduire) ---
+            const gallerySection = document.getElementById('realisations');
+            if (gallerySection) {
+                const filterButtons = gallerySection.querySelectorAll('#filters .filter-btn');
+                const allGalleryItems = Array.from(gallerySection.querySelectorAll('#gallery .gallery-item'));
+                const loadMoreBtn = gallerySection.querySelector('#load-more-btn');
+                const reduceBtn = gallerySection.querySelector('#reduce-btn');
+                const itemsPerLoad = 6;
+
+                function updateGalleryState() {
+                    const currentFilter = gallerySection.querySelector('#filters .active').dataset.filter;
+                    const filteredItems = (currentFilter === 'all') ? allGalleryItems : allGalleryItems.filter(item => item.dataset.category === currentFilter);
+                    const visibleItems = filteredItems.filter(item => !item.classList.contains('hidden'));
+                    loadMoreBtn.classList.toggle('hidden', visibleItems.length === filteredItems.length);
+                    reduceBtn.classList.toggle('hidden', visibleItems.length <= itemsPerLoad);
+                }
+                function applyFilter(filter) {
+                    const itemsToShow = (filter === 'all') ? allGalleryItems : allGalleryItems.filter(item => item.dataset.category === filter);
+                    allGalleryItems.forEach(item => item.classList.add('hidden'));
+                    itemsToShow.slice(0, itemsPerLoad).forEach(item => item.classList.remove('hidden'));
+                    updateGalleryState();
+                }
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        filterButtons.forEach(btn => {
+                            btn.classList.remove('active', 'bg-blue-800', 'text-white');
+                            btn.classList.add('bg-white', 'text-gray-700');
+                        });
+                        button.classList.add('active', 'bg-blue-800', 'text-white');
+                        button.classList.remove('bg-white', 'text-gray-700');
+                        applyFilter(button.dataset.filter);
+                    });
+                });
+                loadMoreBtn.addEventListener('click', () => {
+                    const currentFilter = gallerySection.querySelector('#filters .active').dataset.filter;
+                    const hiddenFilteredItems = (currentFilter === 'all') ? allGalleryItems.filter(item => item.classList.contains('hidden')) : allGalleryItems.filter(item => item.dataset.category === currentFilter && item.classList.contains('hidden'));
+                    hiddenFilteredItems.slice(0, itemsPerLoad).forEach(item => item.classList.remove('hidden'));
+                    updateGalleryState();
+                });
+                reduceBtn.addEventListener('click', () => {
+                    const currentFilter = gallerySection.querySelector('#filters .active').dataset.filter;
+                    const itemsToManage = (currentFilter === 'all') ? allGalleryItems : allGalleryItems.filter(item => item.dataset.category === currentFilter);
+                    itemsToManage.forEach((item, index) => {
+                        if (index >= itemsPerLoad) item.classList.add('hidden');
+                    });
+                    gallerySection.scrollIntoView({ behavior: 'smooth' });
+                    updateGalleryState();
+                });
+                applyFilter('all');
+            }
+
+            // --- SCRIPT POUR COPYRIGHT ET BOUTON "RETOUR EN HAUT" ---
+            const copyrightYear = document.getElementById('copyright-year');
+            const scrollToTopBtn = document.getElementById('scroll-to-top');
+            if (copyrightYear) { copyrightYear.textContent = new Date().getFullYear(); }
+            if (scrollToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) { scrollToTopBtn.classList.remove('opacity-0', 'invisible'); } 
+                    else { scrollToTopBtn.classList.add('opacity-0', 'invisible'); }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
